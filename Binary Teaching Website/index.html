@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta tags for SEO and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Allows for all devices -->
+
+    <!-- Meta Tags for description of website -->
+    <meta name = "description" content = "Learn about the binary system, history, how to compute it, how to write with it, and fun games!"> <!-- Description of webpage -->
+    <meta name = "keywords" content = "binary, computing, binary system, computer science, programming"> <!-- Keyword search for webapge -->
+    <meta name = "author" content = "Westly Orr">
+
+    <!-- Open Graph Tags -->
+    <meta property = "og:title" content = "What is Binary?">
+    <meta property = "og:description" content = "Learn about the binary system, history, how to compute it, how to write with it, and fun games!">
+    <meta property = "og:image" content = "ImagesBeingUsed/Binary Picture.png">
+    <meta property = "og:url" content = "http://127.0.0.1:5500/Binary%20Teaching%20Website/index.html">
+    <meta property = "og:type" content = "website">
+
+    <link rel = "icon" href = "ImagesBeingUsed/favicon.ico" type = "image/x-icon"> <!-- Imports favicon -->
+
+    <!-- Title of webpage -->
+    <title>What is Binary</title>
+
+    <!-- Stylesheets -->
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+    <!-- Upper navigation bar, switches between homepage and author. -->
+    <nav class = "navbarAuthors">
+        <ul class = "ulForNavbarAuthors">
+            <li class = "liForNavbarAuthors"><a class = "aForNavbarAuthors" href = "index.html">Home</a></li>
+            <li class = "liForNavbarAuthors"><a class = "aForNavbarAuthors" href = "about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header, includes the title of the webpage along with author. Also, smashes them between 2 images. -->
+    <header>
+        <img src = "ImagesBeingUsed/Binary Picture.png">
+        <div class = "webpageIntro">
+            <h1>What is Binary?</h1>
+            <h3>By: Westly Orr</h3>
+        </div>
+        <img src = "ImagesBeingUsed/Binary Picture.png">
+    </header>
+
+    <!-- Lower navigation bar, switches between website learning pages. -->
+    <nav class = "navbarLearning">
+        <ul class = "ulForNavbarLearning">
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "index.html">What is Binary?</a></li>
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "numbers.html">Numbers and Binary</a></li>
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "names.html">How to Write Your Name in Binary</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main body of the website. -->
+    <!-- Note: The order from left to right goes: aside, section, article. However, on mobile it goes top down: section, article, aside. -->
+    <main>
+        <!-- Container used to help stylesheet code for mobile devices. -->
+        <div class = "containerForMain">
+
+            <!-- Aside class is mainly used for little fun facts for the user to read. -->
+            <aside>
+                <!-- I used div breaks like these to add spacing between elements. -->
+                <div class = "smallBreakAside"></div>
+                <div class = "funFact">
+                    <!-- Fun facts for aside are usually made up of an h3 tag and a paragraph tag. -->
+                    <h3>Fun Fact 🤯:</h3>
+                    <p>
+                        Besides binary (a base-2 system), there are also other counting systems like octal (base-8) and hexadecimal (base-16)!
+                    </p>
+                </div>
+                
+                <!-- Note: Not all div breaks are the same. This div break is larger than the one previous. -->
+                <div class = "largeBreakAside"></div>
+                <div class = "funFact">
+                    <h3>Fun Fact 🤯:</h3>
+                    <p>There are 1,000,000,000 (1 billion) bits in a gigabyte. That's 1 billion 0's and 1's to make up a program, image, audio file, etc.</p>
+                </div>
+            </aside>
+            
+            <!-- This is where you'll find all of the main text/images of the website. It's also where I put the games. -->
+            <section>
+                <!-- Usually I put h4 tags in combination with paragraph tags. -->
+                <h4>
+                    Binary?
+                </h4>
+                <p>
+                    Binary is a fundamental concept for the foundation of computers and machine learning in modern times, representing data using only two symbols: 0 and 1.
+                    Being the backbone for all modern computing, it's best represented as an on-and-off switch.
+                    Each binary digit, or bit, represents a state of 0 or 1 (0 for off, 1 for on), and a combination of these bits can be used to create complex instructions.
+                </p>
+                <p>
+                    A basic way to put binary better: it's a simple way to communicate complex information for computers/hardware. An example of this would be the binary number 
+                    1010 which is equivalent to the number 10 in our language. Each binary bit/digit can be combined to represent anywhere from binary to letters, and even 
+                    binary to image or audio files. 
+                </p>
+                <h4>
+                    Who Created Binary?
+                </h4>
+                <p>
+                    While Gottfried Wilhelm Leibniz (1646-1716) is credited for the binary system, it can be up to interpretation from scholars of potential plagiarism 
+                    from earlier works of Juan Caramuel de Lobkowitz and Thomas Harriot. It was invented around 1679 and published in 1703. It also used 0's and 1's with some 
+                    remarks on usefulness.
+                </p>
+                <p>
+                    Leibniz focused on the binary system to represent logical concepts and explore the relationship between mathematics and philosophy. Primarily used
+                    to express basic truths using only 2 states. There was also an envisionment of binary logic used in mechanical calculating devices with an on/off state.
+                </p>
+                <h4>
+                    Why Use Binary?
+                </h4>
+                <p>
+                    Understanding binary is important for knowing the basis of how computers store, process, and transmit information. Every complex command from data structures storing
+                    your personal data into arrays or nodes to adding 1 + 1 can be broken down into binary code for the computer/hardware to read and compute. It's like your teacher giving
+                    you a paper for math homework in class. It's got a list of problems written down in your language in which you interpret and compute solutions in your head to
+                    write down on paper. The same goes for computers! Except, instead of computers reading English, their language would be binary.
+                </p>
+                <p>
+                    In terms of benefits, binary allows for efficient data processing and storage. You give the computer/hardware a bunch of data in the forms of numbers,
+                    letters, images, etc. for it to chop up into things like a byte stream (bigger units for file size being kilobytes, megabytes, gigabytes, and so on).
+                    It's crucial for anybody going into fields like programming, data processing, and network communications, and it helps a person understand how computers
+                    store, computer, and send information.
+                </p>
+            </section>
+            
+            <!-- This is where I typically put cool images with text to go along with it. -->
+            <article>
+                <!-- Note: They use Article breaks instead of aside breaks. -->
+                <div class = "largeBreakArticle1"></div>
+                <div class = "funFact">
+                    <!-- I typically have a paragraph to explain the image with a potential link inside the paragraph. -->
+                    <img src = "ImagesBeingUsed/Binary File.png">
+                    <p>Above is an image of a <a href = "https://en.wikipedia.org/wiki/Binary_file" target=_blank>binary file</a> which stores data in a binary format, and usually requires hardware to read.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+    
+    <!-- This is the footer of the document. -->
+    <footer>
+        <!-- The div class footerHeader encloses everything to allow CSS properties of the footer (mostly background color). -->
+        <div class = "footerHeader">
+            <!-- This section of the footer includes all the sources I used for the website. -->
+            <div id = "footerTitle">Sources:</div>
+            <div class = "allMLAStyleSources">
+                <!--This contains all the MLA formatted sources I used. -->
+                "ASCII Table and Description." ASCII-Code.com, www.ascii-code.com/.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Code." Wikipedia, The Free Encyclopedia, Wikimedia Foundation, en.wikipedia.org/wiki/Binary_code.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Number System." YouTube, uploaded by Khan Academy, www.youtube.com/watch?v=sXxwr66Y79Y.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Numbers and Base Systems as Fast as Possible." YouTube, uploaded by TechQuickie, www.youtube.com/watch?v=LpuPe81bc2w.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Numbers." The Mathematics Enthusiast, University of Montana, scholarworks.umt.edu/cgi/viewcontent.cgi?article=1315&context=tme.
+                <div class = "smallSourcesBreak"></div>
+                "Bits and Binary Exercise." Khan Academy, www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/e/bits-and-binary-exercise.
+                <div class = "smallSourcesBreak"></div>
+                "History of ASCII." Carnegie Mellon University, www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html.
+                <div class = "smallSourcesBreak"></div>
+                "Introduction to Binary." Carnegie Mellon University, www.cmu.edu/gelfand/lgc-educational-media/digital-education-modules/dem-documents/new-the-world-of-the-internet-handouts.pdf.
+                <div class = "smallSourcesBreak"></div>
+                Lougheed, Kelly. "Binary." Kelly Lougheed, kellylougheed.github.io/binary/.
+                <div class = "smallSourcesBreak"></div>
+                "Numbers in Binary." YouTube, uploaded by Max's Tech, www.youtube.com/watch?v=Ieq8AR8krrA.
+                <div class = "smallSourcesBreak"></div>
+                "Oral Ondansetron for Gastroenteritis in a Pediatric Emergency Department." PubMed, National Center for Biotechnology Information, www.pubmed.ncbi.nlm.nih.gov/28281152/.
+                <div class = "smallSourcesBreak"></div>
+                "The Binary System Was Created Long Before Leibniz." Communications of the ACM, Association for Computing Machinery, cacm.acm.org/blogcacm/the-binary-system-was-created-long-before-leibniz/#:~:text=First%20known%20publication%20by%20Juan,and%20other%20place%20value%20systems.
+                <div class = "smallSourcesBreak"></div>
+                "Why Do Computers Use 1s and 0s? Binary and Transistors Explained." YouTube, uploaded by Basics Explained, H3Vtux, www.youtube.com/watch?v=LpuPe81bc2w.
+                <div class = "smallSourcesBreak"></div>
+                "Words and Sentences in Binary." YouTube, uploaded by Max's Tech, www.youtube.com/watch?v=FCFWu4NlUJQ.
+            </div>
+
+            <!-- This part of the footer contains all the helpful links for people to click on. The container is used to allow CSS column style properties. -->
+            <div class = "footerStyleElements">
+
+                <!--These sections of the footer are an h5 tag followed with an a tag to represent a section of links for people to click on. -->
+                <div class = "footerHeader1">
+                    <h5>Resources Used in this Website</h5>
+                    <a href = "https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html" target="_blank">ASCII chart</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.ascii-code.com/" target="_blank">ASCII chart (More in Depth)</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/e/bits-and-binary-exercise" target=_blank>Khan Academy Practice</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://kellylougheed.github.io/binary/" target=_blank>Example Game</a>
+                    <br>
+                </div>
+
+                <!-- Another section. -->
+                <div class = "footerHeader2">
+                    <h5>Helpful Sites</h5>
+                    <a href = "https://www.cmu.edu/gelfand/lgc-educational-media/digital-education-modules/dem-documents/new-the-world-of-the-internet-handouts.pdf" target=_blank>Introduction to Binary (Carnegie Mellon University)</a>
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://en.wikipedia.org/wiki/Binary_code" target=_blank>Wikipedia for Binary</a>
+                    <h5>History</h5>
+                    <a href = "https://pubmed.ncbi.nlm.nih.gov/28281152/" target=_blank>Inventor</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://cacm.acm.org/blogcacm/the-binary-system-was-created-long-before-leibniz/#:~:text=First%20known%20publication%20by%20Juan,and%20other%20place%20value%20systems)." target=_blank>More History</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://scholarworks.umt.edu/cgi/viewcontent.cgi?article=1315&context=tme" target=_blank>Scholar Paper</a>
+                </div>
+
+                <!-- Another section. Note: This section is found below the section above it! (Exception would be for mobile)-->
+                <div class = "footerHeader3">
+                    <h5>Youtube Videos</h5>
+                    <a href = "https://www.youtube.com/watch?v=Ieq8AR8krrA&t" target=_blank>Numbers in Binary</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=FCFWu4NlUJQ" target=_blank>Words and Sentences in Binary</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=sXxwr66Y79Y" target=_blank>Binary from Khan Academy</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=LpuPe81bc2w" target=_blank>Binary Numbers and Base Systems</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=Xpk67YzOn5w" target=_blank>⭐Very Good Overview⭐</a>
+                </div>
+
+                <!--This section is just to thank readers with a cool thumbs up picture I created. -->
+                <div class = "footerHeader4">
+                    <h5>Big Thanks for Reading My Website!</h5>
+                    <div class = "footerImgContainer">
+                        <img src = "ImagesBeingUsed/Thumbs Up.png">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright Statement -->
+            <div class = "copyright">
+                &copy; 2025 Westly Orr, All Rights Reserved
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

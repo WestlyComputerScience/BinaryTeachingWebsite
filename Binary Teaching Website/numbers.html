@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for SEO and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Numbers</title>
+
+    <!-- Various stylesheets used. -->
+    <link rel = "stylesheet" href = "style.css">
+    <!-- Below stylesheet is used for the 2 number games.-->
+    <link rel = "stylesheet" href = "numbers.css">
+</head>
+<body>
+
+    <!-- Upper navigation bar, switches between homepage and author. -->
+    <nav class = "navbarAuthors">
+        <ul class = "ulForNavbarAuthors">
+            <li class = "liForNavbarAuthors"><a class = "aForNavbarAuthors" href = "index.html">Home</a></li>
+            <li class = "liForNavbarAuthors"><a class = "aForNavbarAuthors" href = "about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header, includes the title of the webpage along with author. Also, smashes them between 2 images. -->
+    <header>
+        <img src = "ImagesBeingUsed/Binary Picture.png">
+        <div class = "webpageIntro">
+            <h1>Binary Converted to Numbers?</h1>
+            <h3>By: Westly Orr</h3>
+        </div>
+        <img src = "ImagesBeingUsed/Binary Picture.png">
+    </header>
+
+    <!-- Lower navigation bar, switches between website learning pages. -->
+    <nav class = "navbarLearning">
+        <ul class = "ulForNavbarLearning">
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "index.html">What is Binary?</a></li>
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "numbers.html">Numbers and Binary</a></li>
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "names.html">How to Write Your Name in Binary</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main body of the website. -->
+    <!-- Note: The order from left to right goes: aside, section, article. However, on mobile it goes top down: section, article, aside. -->
+    <main>
+         <!-- Container used to help stylesheet code for mobile devices. -->
+        <div class = "containerForMain">
+            <!-- Aside class is mainly used for little fun facts for the user to read. -->
+            <aside>
+
+                <br>
+                <br>
+                 <!-- Fun facts for aside are usually made up of an h3 tag and a paragraph tag. -->
+                <div class = "funFact">
+                    <h3>Questions or Concerns?</h3>
+                    <p>
+                        Email the author of this website: Westly Orr. Email: <a href = "westlyo2024@gmail.com">westlyo2024@gmail.com</a>
+                    </p>
+                </div>
+    
+                 <!-- I used div breaks like these to add spacing between elements. -->
+                <div class = "largeBreakAside"></div>
+                <div class = "funFact">
+                    <h3>Need More Practice?</h3>
+                    <p>
+                        Feel free to check the sources down below! You could even 
+                        click this link for some practice with binary numbers with <a href = "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/e/bits-and-binary-exercise" target=_blank>Khan Academy</a>!
+                    </p>
+                </div>
+    
+                 <!-- Note: Not all div breaks are the same. This div break is larger than the one previous. -->
+                <div class = "megaBreakAside"></div>
+                <div class = "funFact">
+                    <h3>Want to try out another game?</h3>
+                    <p>
+                        You can search all over the web for great binary practice games to improve! Here's a great <a href = "https://kellylougheed.github.io/binary/" target=_blank>example game</a>!
+                    </p>
+                </div>
+            </aside>
+    
+             <!-- This is where you'll find all of the main text/images of the website. It's also where I put the games. -->
+            <section>
+                <!-- Usually I put h4 tags in combination with paragraph tags. -->
+                <h4>
+                    Binary Numbers
+                </h4>
+                <p>
+                    An easy way to interpret binary numbers would be to break them up into separate bits (shown below). Let's take the binary number 1101 as an example.
+                </p>
+                <img src = "ImagesBeingUsed/Binary Numbers 1.png">
+                <p>
+                    What's the pattern with the numbers in the above example in the denominator? 
+                    As your binary number gets longer, each number exponentially increases by a factor of 2 from right to left.
+                </p>
+                <img src = "ImagesBeingUsed/Binary Numbers 2.png">
+                <h4>
+                    Binary Numbers to Our Numbers
+                </h4>
+                <p>
+                    Now knowing the basic split-up approach, we can just add up the numbers at the bottom from left to right <b>IF</b> they have a 1 on top (1 for the on switch). 
+                    Also helpful, you can imagine power switches with the I/O labeled on the switch, and only the machines turned on (the side with the I pressed down) produce an output.
+                </p>
+                <img src = "ImagesBeingUsed/Binary Numbers 3.png">
+                <h4>
+                    Our Numbers to Binary Numbers
+                </h4>
+                <p>
+                    To convert numbers readable to us back into binary numbers, we need to use a different method. The method I'm showing you is a simple division method. 
+                    If you have a number, say 26, you divide 26 by 2 to get 13. This would leave a remainder of 0, so put 0 in the far right of your sequence of bits. However, if you 
+                    divide 13 by 2, you'd get 6 with a remainder of 1, so put 1 to the left of our last bit. Keep doing this process until you're down to 1 or 0.
+                </p>
+                <img src = "ImagesBeingUsed/Binary Numbers 4.png">
+                <h4>
+                    Below are some Fun Practice Games for You to Try Out!
+                </h4>
+                <!-- This is where you can find the coded HTML for the games I made. -->
+                 <!-- This div class allows CSS styling for a grey background.-->
+                <div class = "greyGameBackground">
+                    <!-- This is to open tabs and switch between the 2 games. -->
+                    <div class="tabForGames">
+                        <button onclick="openTab1()">Binary to Number</button>
+                        <button onclick="openTab2()">Number to Binary</button>
+                    </div>
+                    <!-- This is the div class to hold the games seperate from the tabs. -->
+                    <div class = "games">
+                        <!-- This is the binary to number game I create. -->
+                        <div class = "practiceGame">
+                            <!-- This is the display when randomly generating binary number questions. -->
+                            <div id = "practiceNumberGameDisplay" class = "practiceNumberGameDisplay">Pick a random number!</div> <!-- style = "display: none"-->
+                            
+                            <!-- The user selects the question they want to answer. -->
+                            <div class = "practiceNumberGameRandomButtons">
+                                <button onclick = "random4Bit()">Random 4 bit</button>
+                                <button onclick = "random6Bit()">Random 6 bit</button>
+                                <button onclick = "random8Bit()">Random 8 bit</button>
+                            </div>
+            
+                            <!-- This is where the user inputs there answer and submits there response. -->
+                            <br>
+                            <div class = "practiceNumberGameSubmitAndInput">
+                                <input id = "playerRandomBitGuess" placeholder = "Enter the number" autocomplete = "off"> <!--Note: autocomplete = "off" turns off pop-up suggestions!-->
+                                <!-- The button then calls on the calculate solution method to generate an answer to a response. -->
+                                <button id = "practiceNumberGameSubmitButton" class = "practiceNumberGameSubmitButton" onclick = "checkAnswer()">Submit</button>
+                            </div>
+        
+                            <!-- This is the output of the possibly correct or incorrect solution. It also outputs error message (say they enter a word instead of a number)-->
+                            <br>
+                            <div id = "practiceNumberGameOutput" class = "practiceNumberGameOutput"></div>
+                            
+                            <!-- This is used to keep track of score. -->
+                            <div class = "score">
+                                Score:
+                                <p id = "scoreP"></p>
+                            </div>
+                            
+                            <!-- The ruleset for the user to read for the game. -->
+                            <div class = "rules">
+                                <h3><u>Rules:</u></h3>
+                                <p class = "rulesParagraph">1. Pick a random 4, 6, or 8 bit number that will be randomly generated.</p>
+                                <p class = "rulesParagraph">2. Enter your solution of converting the binary number into a human-readable number.</p>
+                                <p class = "rulesParagraph">3. Get a high score! (4 bits are worth 1 point, 6 bits are worth 2, and 8 bits are worth 5!)</p>
+                                <p class = "rulesParagraph">Side Note: Don't forget to randomize an answer after hitting the submit button! 😉</p>
+                            </div>
+                        </div>
+    
+
+                        <!-- This is the second game you can play. It's instead a number to binary game. -->
+                        <div class = "practiceGame2">
+                            <!-- This is the display for the randomly generated number. -->
+                            <div id = "practiceNumberGameDisplayBinary" class = "practiceNumberGameDisplayBinary">Pick a random number!</div> <!-- style = "display: none"-->
+                            
+                            <!-- These are choices for the user to choose how hard of a question they want. -->
+                            <div class = "practiceNumberGameRandomButtonsBinary">
+                                <button onclick = "random1to15()">Random 0-15</button>
+                                <button onclick = "random16to63()">Random 16-63</button>
+                                <button onclick = "random64to127()">Random 64-127</button>
+                            </div>
+            
+                            <!-- This is both the input and submit button the user presses when submitting their answer. -->
+                            <br>
+                            <div class = "practiceNumberGameSubmitAndInputBinary">
+                                <input id = "playerRandomBitGuessBinary" placeholder = "Enter the BINARY number" autocomplete = "off"> <!--Note: autocomplete = "off" turns off pop-up suggestions!-->
+                                <!-- submit button calls a chain of methods to calculate the answer, output the score, lock the submit button, and ect. -->
+                                <button id = "practiceNumberGameSubmitButtonBinary" class = "practiceNumberGameSubmitButtonBinary" onclick = "checkAnswerBinary()">Submit</button>
+                            </div>
+                            
+                            <!-- This is the output telling the user if they got it correct or incorrect. It also displays errors (Ex: they enter a number and not a binary string)-->
+                            <br>
+                            <div id = "practiceNumberGameOutputBinary" class = "practiceNumberGameOutputBinary"></div>
+        
+                            <!-- Outputs the score for the user. -->
+                            <div class = "scoreBinary">
+                                Score:
+                                <p id = "scoreBinaryP"></p>
+                            </div>
+                            
+                            <!-- The ruleset for the user to read about the game. -->
+                            <div class = "rulesBinary">
+                                <h3><u>Rules:</u></h3>
+                                <p class = "rulesParagraphBinary">1. Pick a random number between any of the above values.</p>
+                                <p class = "rulesParagraphBinary">2. Enter your solution of converting the number into a binary number.</p>
+                                <p class = "rulesParagraphBinary">3. Get a high score! (1-16 is worth 1 point, 16-64 is worth 2, and 64-128 is worth 5!)</p>
+                                <p class = "rulesParagraphBinary">Side Note: Don't forget to randomize an answer after hitting the submit button! 😉</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- This is where I typically put cool images with text to go along with it. -->
+            <article>
+                <!-- Note: They use Article breaks instead of aside breaks. -->
+                <div class = "largeBreakArticle"></div>
+                <div class = "funFact">
+                    <!-- I typically have a paragraph to explain the image with a potential link inside the paragraph. -->
+                    <img src = "ImagesBeingUsed/Binary Growth.png">
+                    <p>Binary numbers have exponential growth with 2^x. With every new bit in a binary sequence, we add +1 to the exponent for 2^x to expand the potential of numbers we can create by another power of 2. Look how quickly it grows!</p>
+                </div>
+    
+                <div class = "largeBreakArticle"></div>
+                <div class = "funFact">
+                    <img src = "ImagesBeingUsed/Power Switch.png">
+                    <p>Above is an image of a power switch.</p>
+                </div>
+    
+                <!-- This one could be revised in the potential future to be more efficient and stored better (Ex: made into a list), but I was fine with it for now. -->
+                <div class = "megaBreakArticle"></div>
+                <div class = "funFact">
+                    <h2>Binary System</h2>
+                    <img class = "megaImg" src = "ImagesBeingUsed/Binary System.png">
+                    <!-- The paragraph element is where I meant improvements could be made. -->
+                    <p class = "noCenter">
+                        The Binary System is used for all sorts of things other than computers as well! Some common uses include: 
+                        <br>
+                        <br>
+                        - data transmission over fiber optics, 
+                        <br>
+                        - cryptography and security systems, 
+                        <br>
+                        - some traditional communication methods like drum signals in certain cultures, 
+                        <br>
+                        - certain biological processes where "on" or "off" states can be represented using binary logic
+                    </p>
+                </div>
+            </article>
+        </div>
+        
+
+        <!-- This is the footer of the document. -->
+    <footer>
+        <!-- The div class footerHeader encloses everything to allow CSS properties of the footer (mostly background color). -->
+        <div class = "footerHeader">
+            <!-- This section of the footer includes all the sources I used for the website. -->
+            <div id = "footerTitle">Sources:</div>
+            <div class = "allMLAStyleSources">
+                <!--This contains all the MLA formatted sources I used. -->
+                "ASCII Table and Description." ASCII-Code.com, www.ascii-code.com/.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Code." Wikipedia, The Free Encyclopedia, Wikimedia Foundation, en.wikipedia.org/wiki/Binary_code.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Number System." YouTube, uploaded by Khan Academy, www.youtube.com/watch?v=sXxwr66Y79Y.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Numbers and Base Systems as Fast as Possible." YouTube, uploaded by TechQuickie, www.youtube.com/watch?v=LpuPe81bc2w.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Numbers." The Mathematics Enthusiast, University of Montana, scholarworks.umt.edu/cgi/viewcontent.cgi?article=1315&context=tme.
+                <div class = "smallSourcesBreak"></div>
+                "Bits and Binary Exercise." Khan Academy, www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/e/bits-and-binary-exercise.
+                <div class = "smallSourcesBreak"></div>
+                "History of ASCII." Carnegie Mellon University, www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html.
+                <div class = "smallSourcesBreak"></div>
+                "Introduction to Binary." Carnegie Mellon University, www.cmu.edu/gelfand/lgc-educational-media/digital-education-modules/dem-documents/new-the-world-of-the-internet-handouts.pdf.
+                <div class = "smallSourcesBreak"></div>
+                Lougheed, Kelly. "Binary." Kelly Lougheed, kellylougheed.github.io/binary/.
+                <div class = "smallSourcesBreak"></div>
+                "Numbers in Binary." YouTube, uploaded by Max's Tech, www.youtube.com/watch?v=Ieq8AR8krrA.
+                <div class = "smallSourcesBreak"></div>
+                "Oral Ondansetron for Gastroenteritis in a Pediatric Emergency Department." PubMed, National Center for Biotechnology Information, www.pubmed.ncbi.nlm.nih.gov/28281152/.
+                <div class = "smallSourcesBreak"></div>
+                "The Binary System Was Created Long Before Leibniz." Communications of the ACM, Association for Computing Machinery, cacm.acm.org/blogcacm/the-binary-system-was-created-long-before-leibniz/#:~:text=First%20known%20publication%20by%20Juan,and%20other%20place%20value%20systems.
+                <div class = "smallSourcesBreak"></div>
+                "Why Do Computers Use 1s and 0s? Binary and Transistors Explained." YouTube, uploaded by Basics Explained, H3Vtux, www.youtube.com/watch?v=LpuPe81bc2w.
+                <div class = "smallSourcesBreak"></div>
+                "Words and Sentences in Binary." YouTube, uploaded by Max's Tech, www.youtube.com/watch?v=FCFWu4NlUJQ.
+            </div>
+
+            <!-- This part of the footer contains all the helpful links for people to click on. The container is used to allow CSS column style properties. -->
+            <div class = "footerStyleElements">
+
+                <!--These sections of the footer are an h5 tag followed with an a tag to represent a section of links for people to click on. -->
+                <div class = "footerHeader1">
+                    <h5>Resources Used in this Website</h5>
+                    <a href = "https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html" target="_blank">ASCII chart</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.ascii-code.com/" target="_blank">ASCII chart (More in Depth)</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/e/bits-and-binary-exercise" target=_blank>Khan Academy Practice</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://kellylougheed.github.io/binary/" target=_blank>Example Game</a>
+                    <br>
+                </div>
+
+                <!-- Another section. -->
+                <div class = "footerHeader2">
+                    <h5>Helpful Sites</h5>
+                    <a href = "https://www.cmu.edu/gelfand/lgc-educational-media/digital-education-modules/dem-documents/new-the-world-of-the-internet-handouts.pdf" target=_blank>Introduction to Binary (Carnegie Mellon University)</a>
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://en.wikipedia.org/wiki/Binary_code" target=_blank>Wikipedia for Binary</a>
+                    <h5>History</h5>
+                    <a href = "https://pubmed.ncbi.nlm.nih.gov/28281152/" target=_blank>Inventor</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://cacm.acm.org/blogcacm/the-binary-system-was-created-long-before-leibniz/#:~:text=First%20known%20publication%20by%20Juan,and%20other%20place%20value%20systems)." target=_blank>More History</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://scholarworks.umt.edu/cgi/viewcontent.cgi?article=1315&context=tme" target=_blank>Scholar Paper</a>
+                </div>
+
+                <!-- Another section. Note: This section is found below the section above it! (Exception would be for mobile)-->
+                <div class = "footerHeader3">
+                    <h5>Youtube Videos</h5>
+                    <a href = "https://www.youtube.com/watch?v=Ieq8AR8krrA&t" target=_blank>Numbers in Binary</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=FCFWu4NlUJQ" target=_blank>Words and Sentences in Binary</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=sXxwr66Y79Y" target=_blank>Binary from Khan Academy</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=LpuPe81bc2w" target=_blank>Binary Numbers and Base Systems</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=Xpk67YzOn5w" target=_blank>⭐Very Good Overview⭐</a>
+                </div>
+
+                <!--This section is just to thank readers with a cool thumbs up picture I created. -->
+                <div class = "footerHeader4">
+                    <h5>Big Thanks for Reading My Website!</h5>
+                    <div class = "footerImgContainer">
+                        <img src = "ImagesBeingUsed/Thumbs Up.png">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright Statement -->
+            <div class = "copyright">
+                &copy; 2025 Westly Orr, All Rights Reserved
+            </div>
+
+        </div>
+    </footer>
+    
+    <!-- This uses the numbers.js script, it's used for the 2 number games. -->
+    <script src = "numbers.js"></script>
+
+</body>
+</html>

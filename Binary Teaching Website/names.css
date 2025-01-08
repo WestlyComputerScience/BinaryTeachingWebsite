@@ -1,0 +1,109 @@
+/*NOTE: Advanced stylesheet for the name/word game*/
+
+/*----------------------------------------------Name to Binary Game---------------------------------------------------------*/
+
+.binaryToNamePracticeGame /*For the third game*/
+{
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5); /*3D pop effect for game border*/
+}
+
+.howManyCharactersDisplay
+{
+    text-align: left;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.submitCharactersButton
+{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: hsl(120, 73%, 75%);
+    color: black;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none; /*Gets rid of lines*/
+    padding: 10px 5px;
+    margin: none;
+    cursor: pointer;
+}
+
+.submitCharactersButton:hover
+{
+    background-color: hsl(120, 73%, 65%);
+}
+
+.submitCharactersButton:active
+{
+    background-color: hsl(120, 73%, 55%);
+}
+
+.howManyCharactersInput
+{
+    margin-left: 10px;
+    font-size: 2rem;
+    height: 100%;
+    width: 70%;
+}
+
+.infoForNameInputs
+{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.inputsForName input
+{
+    font-size: 1.5rem;
+    width: 20%;
+    margin: 5px;
+}
+
+.extraSpaceForGame /*Extra space between inputs and buttons*/
+{
+    margin: 30px;
+}
+
+.answerDisplay
+{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.resetGame
+{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: hsl(195, 73%, 70%);
+    color: black;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none; /*Gets rid of lines*/
+    padding: 10px 5px;
+    margin: none;
+    cursor: pointer;
+}
+
+.resetGame:hover
+{
+    background-color: hsl(195, 73%, 60%);
+}
+
+.resetGame:active
+{
+    background-color: hsl(195, 73%, 50%);
+}
+
+.no-hover:hover /*NOTE!: MUST BE BELOW THE CLASSES WHEN OVERRIDING! IT TAKES OVER THEN!*/
+{
+    background-color: hsl(120, 73%, 75%); /* Used when button isn't pressable (overrides other class)*/
+}
+
+.no-active:active
+{
+    background-color: hsl(120, 73%, 75%); /* Used when button isn't pressable (overrides other class)*/
+}
+

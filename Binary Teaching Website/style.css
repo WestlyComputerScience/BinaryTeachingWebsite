@@ -1,0 +1,704 @@
+/*NOTE: Default stylesheet for pages of website*/
+
+/*----------------------------------------------Intro/Basic Elements---------------------------------------------------------*/
+
+/* Main code for the website. */
+body
+{
+    margin: 0px;
+    max-width: 100%; /*Stops overflowing*/
+    overflow-x: hidden; /*Stops horizontal scroll*/
+}
+
+/* Changes to the header of the website (Where I put the author and page title). */
+header
+{
+    background-color: black;
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Distributes space between items */
+    gap: 0px; /*Fixes the gap between the text and the images*/
+    overflow: hidden;
+}
+
+/* This defines the elements of the title/author for the header. */
+.webpageIntro
+{
+    font-family: 'sans-serif', 'roboto';
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    padding: 0px 8%;
+    background-color: black;
+    color: hsl(120, 73%, 50%);
+    text-align: center;
+    white-space: nowrap; /*Prevents text from wrapping*/
+}
+
+/* This defines the images found to the left and right of the author and title tags. */
+header img
+{
+    max-width: 40%;
+    max-height: 20%;
+    padding: 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* This gives paragraph elements a little indent at the start before words appear. */
+p
+{
+    text-indent: 3%;
+}
+
+/*----------------------------------------------Author Navbar---------------------------------------------------------*/
+
+/* Upper navigation bar list edits. */
+.ulForNavbarAuthors
+{
+    list-style-type: none; /*Removes bullet points*/
+    background-color: hsl(120, 73%, 75%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden; /*To change to horizontal*/
+}
+
+/* Upper navigation bar a tag edits. */
+.aForNavbarAuthors
+{
+    text-decoration: none; /*Removes the underline*/
+    padding: 30px;
+    display: block;
+    text-align: center;
+    color: rgb(100, 54, 15);
+    font-weight: bold;
+}
+
+/* Changes color when you hover over it. */
+.aForNavbarAuthors:hover
+{
+    background-color: hsl(120, 73%, 65%);
+}
+
+/* List element changes for upper navigation bar. */
+.liForNavbarAuthors
+{
+    font-family: 'sans-serif', 'roboto';
+    font-size: 2rem;
+    float: left; /*To change to horizontal*/
+}
+
+/*----------------------------------------------Website Learning Navbar---------------------------------------------------------*/
+
+/* List changes to lower navigation bar. */
+.ulForNavbarLearning
+{
+    list-style-type: none; /*Removes bullet points*/
+    background-color: hsl(120, 73%, 75%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden; /*To change to horizontal*/
+}
+
+/* a tag changes to lower navigation bar. */
+.aForNavbarLearning
+{
+    color: rgb(100, 54, 15);
+    text-decoration: none; /*Removes the underline*/
+    padding: 30px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* a tag transition for hovering for lower navigation bar. */
+.aForNavbarLearning:hover
+{
+    background-color:hsl(120, 73%, 65%);
+}
+
+/* List elements for lower navigation bar. */
+.liForNavbarLearning
+{
+    font-family: 'sans-serif', 'roboto';
+    font-size: 1.2rem;
+    float: left; /*To change to horizontal*/
+}
+
+/*----------------------------------------------Main---------------------------------------------------------*/
+
+/*Note: Width must add up to a little less than 100%, otherwise they won't be side by side!*/
+
+/* Aside changes to main body.*/
+aside
+{
+    font-family: 'sans-serif', 'roboto';
+    width: 13%; /*Only takes 13% of available space*/
+    float: left;
+    padding: 10px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/* Aside paragraph changes. */
+aside p
+{
+    font-size: 1.2rem;
+    margin-left: 5px;
+    line-height: 30 px;
+}
+
+/* Section changes to main body. */
+section
+{
+    font-family: 'sans-serif', 'roboto';
+    width: 40%; /*Takes up 40% of available space*/
+    float: left;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/* Section changes to pictures inside it. */
+section img
+{
+    width: 100%;
+}
+
+/* Section changes to h4 header (main header used in section). */
+section h4
+{
+    font-size: 3rem;
+}
+
+/* Section changes to paragraph. */
+section p
+{
+    font-size: 2rem;
+}
+
+/* Article changes to main body. */
+article
+{
+    font-family: 'sans-serif', 'roboto';
+    width: 25%; /*Takes up 25% of the width*/
+    float: right;
+    padding: 10px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/* Article paragraph changes. */
+article p
+{
+    text-align: center;
+}
+
+/* Article image changes. */
+article img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    max-height: 20%;
+}
+
+/*-----------------------------------------------For mobile users--------------------------------------------------------*/
+
+/* Changes to aside, section, and article for mobile users. */
+@media screen and (max-width:600px) /*If the width of a user's screen is 600px or below*/
+{
+    aside, section, article /*Switches them to be on top of each other*/
+    {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+}
+
+/*Changes to BOTH navigation bars for mobile users. */
+@media screen and (max-width:600px) /*Adjust title/navbars for mobile users*/
+{
+    .webpageIntro h1
+    {
+        font-size: 1.5rem;
+    }
+
+    .webpageIntro h3
+    {
+        font-size: 1.2rem;
+    }
+
+    .liForNavbarAuthors
+    {
+        font-size: 1.2rem;
+    }
+
+    .liForNavbarLearning
+    {
+        font-size: 1rem;
+    }
+}
+
+/* Changes to body for mobile users. */
+@media screen and (max-width:600px)
+{
+    body
+    {
+        font-size: 1rem;
+    }
+}
+
+/* Changes to navigation bars lists for mobile users. */
+@media screen and (max-width:600px)
+{
+    nav ul
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Changes to images for mobile users. */
+@media screen and (max-width:600px)
+{
+    img
+    {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Changes to article, section, and aside order for mobile users. Order goes from top to bottom: section, article, aside. */
+@media screen and (max-width: 600px)
+{
+    aside, section, article
+    {
+        float: none; /* Gets rid of floating */
+        width: 100%; 
+    }
+
+    /* Using flexbox to reorder elements */
+    .containerForMain
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Below restructures the aside, section, and article for mobile users*/
+
+    .containerForMain aside
+    {
+        order: 3; /* Places aside last */
+    }
+
+    .containerForMain section
+    {
+        order: 1; /* Places section first */
+    }
+
+    .containerForMain article
+    {
+        order: 2; /* Places article second */
+    }
+}
+
+/*-----------------------------------------------Picture on the sides editing--------------------------------------------------------*/
+
+/* Container div used for aside and article for fun images, facts, and links. */
+.funFact
+{
+    background-color: lightgreen;
+    box-shadow: 2px 2px 5px hsla(59, 78%, 49%, 0.5);
+}
+
+/* Changes to funFact's images. */
+.funFact img
+{
+    padding-top: 20px;
+}
+
+/* Changes to the main header used in funFacts. */
+.funFact h3
+{
+    padding: 10px;
+    color: rgb(100, 54, 15);
+    font-size: 1.4rem;
+    border: 5px solid rgb(100, 54, 15);
+    border-top: none;
+    border-left: none;
+    width: 55%;
+}
+
+/* Changes made to funFact's paragraph element. */
+.funFact p
+{
+    color: rgb(100, 54, 15);
+    padding-bottom: 10px;
+}
+
+/* Changes made for the author picture used in the about page. */
+.authorPicture
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Changes made for the h2 tag (used for the weird article element I mentioned earlier about future improvements) (Line 229: numbers.html). */
+h2
+{
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Changes for bigger div breaks. */
+.smallBreakAside
+{
+    display: block;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+/* Changes for bigger div breaks. */
+.smallBreakArticle
+{
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Changes for bigger div breaks. */
+.mediumBreakArticle
+{
+    display: block;
+    padding-top: 200px;
+    padding-bottom: 300px;
+}
+
+/* Changes for bigger div breaks. */
+.mediumBreakAside
+{
+    display: block;
+    padding-top: 500px;
+    padding-bottom: 500px;
+}
+
+/* Changes for bigger div breaks. */
+.largeBreakAside
+{
+    display: block;
+    padding-top: 700px;
+    padding-bottom: 700px;
+}
+
+/* Changes for bigger div breaks. */
+.megaBreakAside
+{
+    display: block;
+    padding-top: 1200px;
+    padding-bottom: 1200px;
+}
+
+/* Changes for bigger div breaks. */
+.largeBreakArticle
+{
+    display: block;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+/* Changes for bigger div breaks. */
+.largeBreakArticle1
+{
+    display: block;
+    padding-top: 500px;
+    padding-bottom: 450px;
+}
+
+/* Changes for bigger div breaks. */
+.megaBreakArticle
+{
+    display: block;
+    padding-top: 900px;
+    padding-bottom: 900px;
+}
+
+/* Changes for bigger div breaks. */
+.megaImg
+{
+    min-width:100%;
+    min-height: 300px;
+}
+
+/* Used to fix a specific paragraph where centering makes it worse! Also gets rid of indentation 
+   (used for the weird article element I mentioned earlier about future improvements) (Line 229: numbers.html). */
+.noCenter
+{
+    text-indent: 0px;
+    text-align: left;
+}
+
+/* Used to help the binary word "helllo" img to be bigger! (Line 166: names.html) (Can have future improvements) */
+#imgNeedsToBeBigger
+{
+    min-width: 100px;
+    min-height: 25px;
+}
+
+/*----------------------------------------------End/Footer---------------------------------------------------------*/
+
+/* Changes to the overall footer container. */
+footer
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'sans-serif', 'roboto';
+    clear: both; /*Gets rid of the floating*/
+    background-color: hsl(120, 73%, 75%);
+    padding: 25px;
+    color: rgb(100, 54, 15);
+    width: 100%;
+    height: 115vh;
+    min-height: 1075px; /*Fixes the f11 issue*/
+}
+
+/* Changes to the cited sources. */
+.allMLAStyleSources
+{
+    font-size: 1rem;
+}
+
+/* Used for the small breaks between sources. */
+.smallSourcesBreak
+{
+    padding-top: 8px;
+}
+
+/* Changes to the "Sources:" footer title. */
+#footerTitle
+{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    text-indent: 3%;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+
+/* Changes to all the links inside the footer in the container. */
+.footerStyleElements
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+/* Changes to the h5 tag used in the footer (h5 only found in the footer). */
+footer h5
+{
+    font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+/* Changes to links inside the footer. */
+footer a
+{
+    font-size: 1.5rem;
+    margin: 10px;
+    text-decoration: none;
+    color: hsl(28, 74%, 23%);
+}
+
+/* Adds color change and underline change when hovering over a tag. */
+footer a:hover
+{
+    color: hsl(28, 74%, 13%);
+    text-decoration: underline;
+}
+
+/* Adds color change and underline change when clicking an a tag. */
+footer a:active
+{
+    color: hsl(28, 74%, 3%);
+    text-decoration: underline;
+}
+
+/* Changes to footer headers. */
+.footerHeader1, .footerHeader2, .footerHeader3
+{
+    width: 20%;
+}
+
+/* Changes to the thank you message footer header. */
+.footerHeader4
+{
+    width: 40%;
+    text-align: center;
+}
+
+/* Used for a small break betwen links. */
+.smallFooterBreak
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Used to organize image content within the footer. */
+.footerImgContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Used to change the copyright looks at the bottom of the footer. */
+.copyright
+{
+    display: block;
+    justify-content: left;
+    padding-top: 40px;
+}
+
+/*-----------------------------------------------Fix the footer on mobile--------------------------------------------------------*/
+
+/* Adjusts to height problems for footer. */
+@media screen and (max-width: 600px)
+{
+    footer
+    {
+        height: auto;
+    }
+}
+
+/* Adjusts padding and font-sizes in footer. */
+@media screen and (max-width: 600px)
+{
+    footer
+    {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    #footerTitle
+    {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .footerStyleElements
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer h5
+    {
+        font-size: 1.5rem;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    footer a
+    {
+        font-size: 1.2rem;
+        margin: 5px;
+    }
+}
+
+/* Modifies the flexbox properties (ensure elements stack vertically on mobile). */
+@media screen and (max-width: 600px)
+{
+    .footerStyleElements
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerHeader1, .footerHeader2, .footerHeader3, .footerHeader4
+    {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Makes sure images are set in place (No outstretching boundaries. */
+@media screen and (max-width: 600px)
+{
+    .footerImgContainer img
+    {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/*-----------------------------------------------Gets rid of all the breaks on mobile--------------------------------------------------------*/
+
+/* Make all div breaks non-existant on mobile. */
+@media screen and (max-width: 600px)
+{
+        .smallBreakAside
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .smallBreakArticle
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .mediumBreakArticle
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .mediumBreakAside
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .largeBreakAside
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .megaBreakAside
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .largeBreakArticle
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .largeBreakArticle1
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .megaBreakArticle
+    {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}

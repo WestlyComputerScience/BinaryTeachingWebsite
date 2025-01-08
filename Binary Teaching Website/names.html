@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for SEO and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letters in Binary</title>
+
+    <!-- Various stylesheets used. -->
+    <link rel = "stylesheet" href = "style.css">
+    <!-- Below stylesheet is used for the name/word game.-->
+    <link rel = "stylesheet" href = "names.css">
+</head>
+<body>
+
+    <!-- Upper navigation bar, switches between homepage and author. -->
+    <nav class = "navbarAuthors">
+        <ul class = "ulForNavbarAuthors">
+            <li class = "liForNavbarAuthors"><a class = "aForNavbarAuthors" href = "index.html">Home</a></li>
+            <li class = "liForNavbarAuthors"><a class = "aForNavbarAuthors" href = "about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header, includes the title of the webpage along with author. Also, smashes them between 2 images. -->
+    <header>
+        <img src = "ImagesBeingUsed/Binary Picture.png">
+        <div class = "webpageIntro">
+            <h1>How Can I Write My Name in Binary?</h1>
+            <h3>By: Westly Orr</h3>
+        </div>
+        <img src = "ImagesBeingUsed/Binary Picture.png">
+    </header>
+
+    <!-- Lower navigation bar, switches between website learning pages. -->
+    <nav class = "navbarLearning">
+        <ul class = "ulForNavbarLearning">
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "index.html">What is Binary?</a></li>
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "numbers.html">Numbers and Binary</a></li>
+            <li class = "liForNavbarLearning"><a class = "aForNavbarLearning" href = "names.html">How to Write Your Name in Binary</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main body of the website. -->
+    <!-- Note: The order from left to right goes: aside, section, article. However, on mobile it goes top down: section, article, aside. -->
+    <main>
+        <!-- Container used to help stylesheet code for mobile devices. -->
+        <div class = "containerForMain">
+
+            <!-- Aside class is mainly used for little fun facts for the user to read. -->
+            <aside>
+                <!-- I used div breaks like these to add spacing between elements. -->
+                <div class = "mediumBreakAside"></div>
+                <div class = "funFact">
+                    <!-- Fun facts for aside are usually made up of an h3 tag and a paragraph tag. -->
+                    <h3>Want to See More?</h3>
+                    <p>Here's a link to the full character <a href = "https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html" target="_blank">ASCII chart</a>.</p>
+                </div>
+    
+                <div class = "mediumBreakAside"></div>
+                <div class = "funFact">
+                    <h3>Want to See EVEN More?</h3>
+                    <p>Here's a link to the full <a href = "https://www.ascii-code.com/" target="_blank">ASCII chart</a> (Includes OCT, HEX, SYMBOL, and HTML number/name!).</p>
+                </div>
+    
+                 <!-- Note: Not all div breaks are the same. This div break is larger than the one previous. -->
+                <div class = "largeBreakAside"></div>
+                <div class = "funFact">
+                    <h3>Thanks!</h3>
+                    <p>
+                        Hope you enjoyed learning binary!
+                    </p>
+                </div>
+            </aside>
+    
+            <!-- This is where you'll find all of the main text/images of the website. It's also where I put the games. -->
+            <section>
+                <!-- Usually I put h4 tags in combination with paragraph tags. -->
+                <h4>
+                    What Prior Steps Do We Need to Understand Before Writing Our Name in Binary?
+                </h4>
+                <p>
+                    Notably, writing your name in binary is more complex than converting numbers to binary. 
+                    This is because binary bits combine to represent numbers, so encoding letters requires a different method. 
+                    A solution to this was the ASCII table. By following the table, we can accurately represent each letter of your name in binary form.
+                </p>
+                <p>
+                    The ASCII table stands for the American Standard Code for Information Interchange, and it's a character encoding standard used for computers and other 
+                    electronic devices to represent text as numbers. Thus, allowing us to convert letters to numbers to binary bit sequences and allowing us to write with the computer. 
+                </p>
+                <img src = "ImagesBeingUsed/ASCII Chart.png">
+    
+                <h4>How to Write Your Name in Binary</h4>
+                <p>
+                    Now that we know the ASCII chart, it's pretty straightforward to create your name using binary. Below is an example of how someone might create their first name 
+                    using the ASCII chart.
+                </p>
+                <img src = "ImagesBeingUsed/Binary Name Example.png">
+    
+    
+                <!-- Below is the code for the name/word game I created. -->
+                <h4>Below is Another Practice Game for You to Try Out!</h4>
+
+                <!-- Container used for the grey background in CSS styling. -->
+                <div class = "binaryToNamePracticeGame">
+
+                    <!-- Display that doesn't change this time. -->
+                    <div class = "howManyCharactersDisplay">Enter Your Name/Word: </div>
+
+                    <!-- Allows the user a min of 1 character, but a max of 24 characters for the word. 
+                         Note: In case the user hard enters more than 24 to crash the website, the JS code stops it!-->
+                    <input id = "howManyCharactersInput" class = "howManyCharactersInput" type = "number" min="1" max="24">
+
+                    <!-- Once they submit, it creates HTML inputs for the user to input binary numbers. -->
+                    <button class = "submitCharactersButton" onclick = "createInputs()">Submit</button>
+                    <br>
+                    
+                    <div class = "infoForNameInputs">Enter the Binary Code in Each of the Boxes Below!</div>
+                    
+                    <!-- All input elements inside this container. -->
+                    <div id = "inputsForName" class = "inputsForName">
+                        <!--New input elements will be inserted here during program-->
+                    </div>
+                    <!-- Adds CSS spacing for the game. -->
+                    <div class = "extraSpaceForGame"></div>
+                    
+                    <!-- The submit and reset buttons for the user to use. -->
+                    <button class = "submitCharactersButton" onclick = "checkSolution()">Check Answer</button>
+                    <button class = "resetGame" onclick = "resetGame()">Reset</button>
+                    
+                    <!-- Translates what the user wrote into a combination of characters. 
+                         Note: It doesn't prevent them from entering naughty words yet! It also displays errors
+                         (Ex: They input a number instead of a binary number or leave a field empty)-->
+                    <div id = "answerDisplay" class = "answerDisplay"></div>
+                    
+                    <!-- The rules for the user to read. -->
+                    <div class = "rules">
+                        <h3><u>Rules:</u></h3>
+                        <p class = "rulesParagraph">1. Enter how many letters are in your name. (Include Spaces)</p>
+                        <p class = "rulesParagraph">2. Enter the binary code for each letter in your name.</p>
+                        <p class = "rulesParagraph">3. Hit check your answer!</p>
+                        <p class = "rulesParagraph">Side Note: Don't forget to use the table on below to help! 😉</p>
+                        <p class = "rulesParagraph"><u>Bonus:</u> The code can handle various characters from your keyboard. Can you discover other symbols in binary?</p>
+                    </div>
+                </div>
+    
+                <!-- Repeated image of the chart for easier access. -->
+                <img src = "ImagesBeingUsed/ASCII Chart.png">
+            </section>
+            
+             <!-- This is where I typically put cool images with text to go along with it.-->
+            <article>
+                <!-- Note: They use Article breaks instead of aside breaks. -->
+                <div class = "largeBreakArticle"></div>
+                <div class = "funFact">
+                     <!-- I typically have a paragraph to explain the image with a potential link inside the paragraph. -->
+                    <img src = "ImagesBeingUsed/Morse Code.png">
+                    <p>
+                        While Morse Code is related to the concept of binary, it's not directly considered binary code. Instead, it uses a system of dots and dashes to represent letters and numbers. 
+                        Interestingly, you can think of Morse Code as an early form of ASCII, where dots and dashes function similarly to 1s and 0s. Pretty cool, right?
+                    </p>
+                </div>
+                
+                <!-- Note: Some article breaks are bigger than others! -->
+                <div class = "megaBreakArticle"></div>
+                <div class = "funFact">
+                    <img id = "imgNeedsToBeBigger" src = "ImagesBeingUsed/Hello in Binary.png">
+                    <p>This sequence of binary bytes represents the word "Hello!" It has the correct capitalization and punctuation too!</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- This is the footer of the document. -->
+    <footer>
+        <!-- The div class footerHeader encloses everything to allow CSS properties of the footer (mostly background color). -->
+        <div class = "footerHeader">
+            <!-- This section of the footer includes all the sources I used for the website. -->
+            <div id = "footerTitle">Sources:</div>
+            <div class = "allMLAStyleSources">
+                <!--This contains all the MLA formatted sources I used. -->
+                "ASCII Table and Description." ASCII-Code.com, www.ascii-code.com/.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Code." Wikipedia, The Free Encyclopedia, Wikimedia Foundation, en.wikipedia.org/wiki/Binary_code.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Number System." YouTube, uploaded by Khan Academy, www.youtube.com/watch?v=sXxwr66Y79Y.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Numbers and Base Systems as Fast as Possible." YouTube, uploaded by TechQuickie, www.youtube.com/watch?v=LpuPe81bc2w.
+                <div class = "smallSourcesBreak"></div>
+                "Binary Numbers." The Mathematics Enthusiast, University of Montana, scholarworks.umt.edu/cgi/viewcontent.cgi?article=1315&context=tme.
+                <div class = "smallSourcesBreak"></div>
+                "Bits and Binary Exercise." Khan Academy, www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/e/bits-and-binary-exercise.
+                <div class = "smallSourcesBreak"></div>
+                "History of ASCII." Carnegie Mellon University, www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html.
+                <div class = "smallSourcesBreak"></div>
+                "Introduction to Binary." Carnegie Mellon University, www.cmu.edu/gelfand/lgc-educational-media/digital-education-modules/dem-documents/new-the-world-of-the-internet-handouts.pdf.
+                <div class = "smallSourcesBreak"></div>
+                Lougheed, Kelly. "Binary." Kelly Lougheed, kellylougheed.github.io/binary/.
+                <div class = "smallSourcesBreak"></div>
+                "Numbers in Binary." YouTube, uploaded by Max's Tech, www.youtube.com/watch?v=Ieq8AR8krrA.
+                <div class = "smallSourcesBreak"></div>
+                "Oral Ondansetron for Gastroenteritis in a Pediatric Emergency Department." PubMed, National Center for Biotechnology Information, www.pubmed.ncbi.nlm.nih.gov/28281152/.
+                <div class = "smallSourcesBreak"></div>
+                "The Binary System Was Created Long Before Leibniz." Communications of the ACM, Association for Computing Machinery, cacm.acm.org/blogcacm/the-binary-system-was-created-long-before-leibniz/#:~:text=First%20known%20publication%20by%20Juan,and%20other%20place%20value%20systems.
+                <div class = "smallSourcesBreak"></div>
+                "Why Do Computers Use 1s and 0s? Binary and Transistors Explained." YouTube, uploaded by Basics Explained, H3Vtux, www.youtube.com/watch?v=LpuPe81bc2w.
+                <div class = "smallSourcesBreak"></div>
+                "Words and Sentences in Binary." YouTube, uploaded by Max's Tech, www.youtube.com/watch?v=FCFWu4NlUJQ.
+            </div>
+
+            <!-- This part of the footer contains all the helpful links for people to click on. The container is used to allow CSS column style properties. -->
+            <div class = "footerStyleElements">
+
+                <!--These sections of the footer are an h5 tag followed with an a tag to represent a section of links for people to click on. -->
+                <div class = "footerHeader1">
+                    <h5>Resources Used in this Website</h5>
+                    <a href = "https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html" target="_blank">ASCII chart</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.ascii-code.com/" target="_blank">ASCII chart (More in Depth)</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/e/bits-and-binary-exercise" target=_blank>Khan Academy Practice</a>
+                    <br>
+
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://kellylougheed.github.io/binary/" target=_blank>Example Game</a>
+                    <br>
+                </div>
+
+                <!-- Another section. -->
+                <div class = "footerHeader2">
+                    <h5>Helpful Sites</h5>
+                    <a href = "https://www.cmu.edu/gelfand/lgc-educational-media/digital-education-modules/dem-documents/new-the-world-of-the-internet-handouts.pdf" target=_blank>Introduction to Binary (Carnegie Mellon University)</a>
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://en.wikipedia.org/wiki/Binary_code" target=_blank>Wikipedia for Binary</a>
+                    <h5>History</h5>
+                    <a href = "https://pubmed.ncbi.nlm.nih.gov/28281152/" target=_blank>Inventor</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://cacm.acm.org/blogcacm/the-binary-system-was-created-long-before-leibniz/#:~:text=First%20known%20publication%20by%20Juan,and%20other%20place%20value%20systems)." target=_blank>More History</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://scholarworks.umt.edu/cgi/viewcontent.cgi?article=1315&context=tme" target=_blank>Scholar Paper</a>
+                </div>
+
+                <!-- Another section. Note: This section is found below the section above it! (Exception would be for mobile)-->
+                <div class = "footerHeader3">
+                    <h5>Youtube Videos</h5>
+                    <a href = "https://www.youtube.com/watch?v=Ieq8AR8krrA&t" target=_blank>Numbers in Binary</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=FCFWu4NlUJQ" target=_blank>Words and Sentences in Binary</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=sXxwr66Y79Y" target=_blank>Binary from Khan Academy</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=LpuPe81bc2w" target=_blank>Binary Numbers and Base Systems</a>
+
+                    <br>
+                    <div class = "smallFooterBreak"></div>
+                    <a href = "https://www.youtube.com/watch?v=Xpk67YzOn5w" target=_blank>⭐Very Good Overview⭐</a>
+                </div>
+
+                <!--This section is just to thank readers with a cool thumbs up picture I created. -->
+                <div class = "footerHeader4">
+                    <h5>Big Thanks for Reading My Website!</h5>
+                    <div class = "footerImgContainer">
+                        <img src = "ImagesBeingUsed/Thumbs Up.png">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright Statement -->
+            <div class = "copyright">
+                &copy; 2025 Westly Orr, All Rights Reserved
+            </div>
+
+        </div>
+    </footer>
+    
+    <!-- This uses the names js script. It's used for the name/word game. -->
+    <script src = "names.js"></script>
+
+</body>
+</html>

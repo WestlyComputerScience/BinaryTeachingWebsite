@@ -1,0 +1,279 @@
+/*NOTE: Advanced stylesheet for the number games*/
+
+/*----------------------------------------------Tabs for the Games---------------------------------------------------------*/
+
+.tabForGames
+{
+    overflow: hidden;
+    background-color: hsl(0, 0%, 80%);
+    border: solid;
+    margin-bottom: 0px;
+    border: none;
+    max-width: 50%;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5); /*3D pop effect for game border*/
+}
+
+.tabForGames button
+{
+    width: 50%;
+    background-color: hsl(0, 0%, 80%);
+    float: left;
+    outline: none;
+    border: 1px solid;
+    cursor: pointer;
+    padding: 14px 16px;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.tabForGames button:hover
+{
+    background-color: hsl(0, 0%, 70%);
+}
+
+.tabForGames button:active
+{
+    background-color: hsl(0, 0%, 60%);
+}
+
+/*----------------------------------------------Practice Number Game---------------------------------------------------------*/
+
+.practiceGame /*For the first game*/
+{
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5); /*3D pop effect for game border*/
+}
+
+.practiceNumberGameDisplay
+{
+    padding: 10px 10px; /*Must be padding! Not margin!*/
+    font-size: 3rem;
+    text-align: center;
+}
+
+.practiceNumberGameRandomButtons
+{
+    text-align: center;
+}
+
+.practiceNumberGameRandomButtons button
+{
+    background-color: hsl(230, 60%, 60%);
+    color: white;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none; /*Gets rid of lines*/
+    padding: 10px 5px;
+    margin: none;
+    cursor: pointer;
+}
+
+.practiceNumberGameRandomButtons button:hover
+{
+    background-color: hsl(230, 60%, 50%);
+}
+
+.practiceNumberGameRandomButtons button:active
+{
+    background-color: hsl(230, 60%, 40%);
+}
+
+.practiceNumberGameSubmitAndInput
+{
+    display: flex;
+    align-items: center; /*Centers vertically*/
+    justify-content: center; /*Centers horizontally*/
+}
+
+.practiceNumberGameSubmitAndInput button
+{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: hsl(120, 73%, 75%);
+    color: black;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none; /*Gets rid of lines*/
+    padding: 10px 5px;
+    margin: none;
+    cursor: pointer;
+}
+
+#practiceNumberGameSubmitButton:disabled
+{
+    opacity: 0.6; /*Gives that faded out vibe and makes the button unclickable*/
+    cursor: not-allowed; /*Cursor change to show it's not clickable*/
+}
+
+.practiceNumberGameSubmitButton:hover
+{
+    background-color: hsl(120, 73%, 65%);
+}
+
+.practiceNumberGameSubmitButton:active
+{
+    background-color: hsl(120, 73%, 55%);
+}
+
+.practiceNumberGameSubmitAndInput input
+{
+    font-size: 2rem;
+    height: 100%;
+    width: 70%;
+}
+
+.rules
+{
+    font-size: 1.3rem;
+}
+
+.rules p
+{
+    font-size: 1.2rem;
+}
+
+.practiceNumberGameOutput
+{
+    padding: 20px 20px;
+    font-size: 2rem;
+}
+
+.score /*Used for displaying the score*/
+{
+    text-align: center;
+    font-size: 3rem;
+    color: hsl(120, 73%, 45%);
+}
+
+#scoreP
+{
+    text-align: center;
+    font-size: 3rem;
+    margin:none;
+}
+
+/*----------------------------------------------Practice Number to Binary Game (Note: just added binary to the end of variables to make it easier!)---------------------------------------------------------*/
+
+.practiceGame2 /*For the second game*/
+{
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5); /*3D pop effect for game border*/
+}
+
+.practiceNumberGameDisplayBinary
+{
+    padding: 10px 10px; /*Must be padding! Not margin!*/
+    font-size: 3rem;
+    text-align: center;
+}
+
+.practiceNumberGameRandomButtonsBinary
+{
+    text-align: center;
+}
+
+.practiceNumberGameRandomButtonsBinary button
+{
+    background-color: hsl(230, 60%, 60%);
+    color: white;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none; /*Gets rid of lines*/
+    padding: 10px 5px;
+    margin: none;
+    cursor: pointer;
+}
+
+.practiceNumberGameRandomButtonsBinary button:hover
+{
+    background-color: hsl(230, 60%, 50%);
+}
+
+.practiceNumberGameRandomButtonsBinary button:active
+{
+    background-color: hsl(230, 60%, 40%);
+}
+
+.practiceNumberGameSubmitAndInputBinary
+{
+    display: flex;
+    align-items: center; /*Centers vertically*/
+    justify-content: center; /*Centers horizontally*/
+}
+
+.practiceNumberGameSubmitAndInputBinary button
+{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: hsl(120, 73%, 75%);
+    color: black;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none; /*Gets rid of lines*/
+    padding: 10px 5px;
+    margin: none;
+    cursor: pointer;
+}
+
+#practiceNumberGameSubmitButtonBinary:disabled
+{
+    opacity: 0.6; /*Gives that faded out vibe and makes the button unclickable*/
+    cursor: not-allowed; /*Cursor change to show it's not clickable*/
+}
+
+.practiceNumberGameSubmitButtonBinary:hover
+{
+    background-color: hsl(120, 73%, 65%);
+}
+
+.practiceNumberGameSubmitButtonBinary:active
+{
+    background-color: hsl(120, 73%, 55%);
+}
+
+.practiceNumberGameSubmitAndInputBinary input
+{
+    font-size: 2rem;
+    height: 100%;
+    width: 70%;
+}
+
+.rulesBinary
+{
+    font-size: 1.3rem;
+}
+
+.rulesBinary p
+{
+    font-size: 1.2rem;
+}
+
+.practiceNumberGameOutputBinary
+{
+    padding: 20px 20px;
+    font-size: 2rem;
+}
+
+.scoreBinary
+{
+    text-align: center;
+    font-size: 3rem;
+    color: hsl(120, 73%, 45%);
+}
+
+#scoreBinaryP
+{
+    text-align: center;
+    font-size: 3rem;
+    margin:none;
+}
+
+.no-hover:hover /*Used to disable button*/
+{
+    background-color: hsl(120, 73%, 75%);
+}
+
+.no-active:active /*Used to disable button*/
+{
+    background-color: hsl(120, 73%, 75%);
+}
